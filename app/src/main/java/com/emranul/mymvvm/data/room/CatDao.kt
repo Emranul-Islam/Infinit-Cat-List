@@ -1,6 +1,7 @@
 package com.emranul.mymvvm.data.room
 
 import androidx.lifecycle.LiveData
+import androidx.paging.PagingSource
 import androidx.room.*
 import com.emranul.mymvvm.data.response.CatResponseItem
 
@@ -8,7 +9,7 @@ import com.emranul.mymvvm.data.response.CatResponseItem
 interface CatDao {
 
     @Query("SELECT * FROM cat_table")
-    fun getLocalCats():LiveData<List<CatResponseItem>>
+    fun getLocalCats():PagingSource<Int,CatResponseItem>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveCat(catResponseItem: CatResponseItem):Long

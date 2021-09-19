@@ -2,6 +2,7 @@ package com.emranul.mymvvm.di
 
 import android.content.Context
 import androidx.room.Room
+import com.emranul.mymvvm.data.adapter.AdapterCloud
 import com.emranul.mymvvm.data.api.ApiServices
 import com.emranul.mymvvm.data.room.CatDatabase
 import dagger.Module
@@ -13,7 +14,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-const val BASE_URL = "https://api.thecatapi.com/v1/"
+
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
@@ -21,7 +22,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideRetroInstance(): ApiServices = Retrofit.Builder()
-        .baseUrl(BASE_URL)
+        .baseUrl(ApiServices.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(ApiServices::class.java)
@@ -35,4 +36,6 @@ object AppModule {
     @Provides
     @Singleton
     fun provideCatDao(database: CatDatabase) = database.catDao()
+
+
 }

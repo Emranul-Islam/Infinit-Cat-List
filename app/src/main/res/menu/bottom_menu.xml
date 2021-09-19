@@ -4,7 +4,7 @@
     <item
         android:id="@+id/cloudFragment"
         android:icon="@drawable/ic_round_cloud_24"
-        android:title="Cloud"/>
+        android:title="Cloud" />
     <item
         android:id="@+id/localFragment"
         android:icon="@drawable/ic_round_save_24"
