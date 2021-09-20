@@ -8,7 +8,7 @@ import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.emranul.mymvvm.databinding.LoadStateBinding
 
-class AdapterLoadState constructor(private val retrys: () -> Unit) :
+class AdapterLoadState constructor(private val adapterCloud: AdapterCloud) :
     LoadStateAdapter<AdapterLoadState.LoaderStateViewHolder>() {
 
 
@@ -25,17 +25,17 @@ class AdapterLoadState constructor(private val retrys: () -> Unit) :
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            ), retrys
+            ), adapterCloud
         )
     }
 
-    class LoaderStateViewHolder(private val binding: LoadStateBinding, retry: () -> Unit) :
+    class LoaderStateViewHolder(private val binding: LoadStateBinding, adapterCloud: AdapterCloud) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
 
             binding.button2.setOnClickListener {
-                retry()
+                adapterCloud.retry()
             }
         }
 

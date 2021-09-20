@@ -91,8 +91,8 @@ class CloudFragment : Fragment() {
 
         binding.recyclerView.apply {
             adapter = adapterCloud.withLoadStateHeaderAndFooter(
-                AdapterLoadState { adapterCloud::retry },
-                AdapterLoadState { adapterCloud::retry }
+                AdapterLoadState(adapterCloud),
+                AdapterLoadState(adapterCloud)
             )
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
