@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/cloudFragment"
-        android:name="com.emranul.mymvvm.ui.cloudFragment.CloudFragment"
+        android:name="com.emranul.infiniteCatsList.ui.cloudFragment.CloudFragment"
         android:label="Cats from Cloud"
         tools:layout="@layout/fragment_cloud" />
     <fragment
         android:id="@+id/localFragment"
-        android:name="com.emranul.mymvvm.ui.localFragment.LocalFragment"
+        android:name="com.emranul.infiniteCatsList.ui.localFragment.LocalFragment"
         android:label="Cats from Local"
         tools:layout="@layout/fragment_local" />
 </navigation>
