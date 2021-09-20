@@ -16,7 +16,7 @@ class CatRepositories @Inject constructor(
 
     fun getCatsFromCloud() = Pager(
         PagingConfig(
-            25,
+            5,
             enablePlaceholders = false
         )
     ){

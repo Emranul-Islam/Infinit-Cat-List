@@ -2,7 +2,6 @@ package com.emranul.mymvvm.di
 
 import android.content.Context
 import androidx.room.Room
-import com.emranul.mymvvm.data.adapter.AdapterCloud
 import com.emranul.mymvvm.data.api.ApiServices
 import com.emranul.mymvvm.data.room.CatDatabase
 import dagger.Module

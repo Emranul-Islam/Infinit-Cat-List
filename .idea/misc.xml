@@ -5,8 +5,11 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/cloud_item.xml" value="0.26296296296296295" />
+        <entry key="app/src/main/res/layout/error_state.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_cloud.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_local.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/load_state.xml" value="0.1537037037037037" />
+        <entry key="app/src/main/res/layout/local_item.xml" value="0.1537037037037037" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.10740740740740741" />
       </map>
     </option>
